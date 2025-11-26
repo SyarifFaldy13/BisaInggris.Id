@@ -478,6 +478,108 @@ nav ul#navMenu {
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
 }
 
+/* 🔷 TENTANG KAMI - Box Neon Cyan */
+.about-box {
+    background: rgba(0, 20, 20, 0.7);
+    border: 2px solid var(--cyan-neon);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 30%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.about-content strong {
+    color: var(--cyan-neon);
+    font-weight: 600;
+}
+
+/* 🔷 TESTIMONI - Slider Infinite */
+.testimonials-section {
+    padding: 100px 0;
+}
+
+.testimonial-slider {
+    display: flex;
+    gap: 32px;
+    animation: scrollTestimonials 25s linear infinite;
+    width: max-content;
+    padding: 20px 0;
+}
+
+.testimonial-slider:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollTestimonials {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% / 3)); }
+}
+
+.testimonial-card {
+    background: rgba(0, 20, 20, 0.7);
+    border: 2px solid var(--cyan-neon);
+    border-radius: 12px;
+    padding: 24px;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--cyan-neon);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 4px;
+}
+
+.testimonial-role {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Duplicate testimonials for seamless infinite scroll */
+.testimonial-duplicate {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .testimonial-duplicate {
+        display: block;
+    }
+}
+
 /* Contact */
 .contact-section {
     padding: 100px 0;
@@ -687,4 +789,16 @@ footer {
     .section-title h2 { font-size: 2rem; }
     .skills-grid { grid-template-columns: 1fr; }
     .contact-box { padding: 30px 20px; }
+
+    /* On mobile, show static testimonials */
+    .testimonial-slider {
+        animation: none;
+        overflow-x: auto;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .testimonial-card {
+        width: 280px;
+    }
 }
