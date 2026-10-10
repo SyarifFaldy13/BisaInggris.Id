@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIsaInggris.Id | Kurikulum Berbasis Level CEFR</title>
+    <meta name="description" content="Layanan les privat dan small group bahasa Inggris terbaik di Sambas, Kalimantan Barat. Kurikulum berbasis level CEFR (A1-B2) dengan guru bersertifikasi resmi Kemendikbudristek.">
+    <meta name="theme-color" content="#b5bdc9">
+
+    <!-- OpenGraph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BIsaInggris.Id | Kurikulum Berbasis Level CEFR">
+    <meta property="og:description" content="Kuasai bahasa Inggris sesuai level kemampuanmu dari pemula sampai mahir. Belajar menyenangkan & efektif di Sambas.">
+    <meta property="og:url" content="https://bisainggris.id">
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <!-- Interactive Background Dot Matrix -->
+    <canvas id="dots-bg" aria-hidden="true"></canvas>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#beranda" class="logo">BIsaInggris.Id</a>
+            <button class="mobile-menu-btn" id="menuBtn" aria-label="Buka Menu Navigasi" aria-expanded="false">
+                <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </button>
+            <nav aria-label="Navigasi Utama">
+                <ul id="navMenu">
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#program">Program</a></li>
+                    <li><a href="#kurikulum">Kurikulum</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="glitch-text" data-text="KUASAI BAHASA INGGRIS">KUASAI BAHASA INGGRIS</h1>
+                    <p data-scroll-reveal="words">BELAJAR SESUAI LEVEL KEMAMPUANMU – DARI PEMULA SAMPAI MAHIR!</p>
+                    <div class="hero-buttons">
+                        <a href="#kontak" class="btn btn-primary">DAFTAR GRATIS SEKARANG</a>
+                        <a href="#kurikulum" class="btn btn-secondary">LIHAT KURIKULUM</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <h2 class="image-placeholder">BIMBEL BISA INGGRIS | English Foreign Language Class</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="program" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>KURIKULUM BERBASIS KEMAMPUAN</h2>
+                <p data-scroll-reveal="words">Program disesuaikan dengan tingkat kemampuan bahasa Inggris peserta didik</p>
+            </div>
+            <div class="programs-grid">
+                <!-- A1 Program -->
+                <div class="program-card">
+                    <div class="program-content">
+                        <span class="level-tag">LEVEL A1 – BEGINNER</span>
+                        <h3>UNTUK PEMULA MUTLAK</h3>
+                        <p>Bagi yang belum pernah belajar bahasa Inggris atau hanya mengenal sedikit kosakata</p>
+                        <div class="curriculum-section">
+                            <h4>TOPIK UTAMA</h4>
+                            <ul class="curriculum-list">
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Subject pronouns</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Simple present tense</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Articles &amp; Prepositions</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Daily expressions</li>
+                            </ul>
+                        </div>
+                        <div class="program-details">
+                            <div class="program-detail price">
+                                <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L414.7 321.3c25-25 25-65.5 0-90.5l-176-176C226.7 42.7 210.5 36 193.5 36H48C21.5 36 0 57.5 0 84zM112 152a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                                <span>Private: Rp25.000/sesi | Small Group: Rp150.000/2x seminggu (1 bulan)</span>
+                            </div>
+                            <div class="program-detail">
+                                <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zm0 96a24 24 0 0 0 -24 24V248c0 6.4 2.5 12.5 7 17l80 80c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-73-73V120a24 24 0 0 0 -24-24z"/></svg>
+                                <span>8 pertemuan dalam 1 bulan</span>
+                            </div>
+                        </div>
+                        <a href="#kontak" class="program-btn">DAFTAR SEKARANG</a>
+                    </div>
+                </div>
+
+                <!-- A2 Program -->
+                <div class="program-card">
+                    <div class="program-content">
+                        <span class="level-tag">LEVEL A2 – ELEMENTARY</span>
+                        <h3>UNTUK PEMULA LANJUTAN</h3>
+                        <p>Bagi yang sudah bisa berkomunikasi dasar namun ingin mengembangkan kemampuan lebih jauh</p>
+                        <div class="curriculum-section">
+                            <h4>TOPIK UTAMA</h4>
+                            <ul class="curriculum-list">
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Simple past tense</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Future tense</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Modal verbs</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Daily routines</li>
+                            </ul>
+                        </div>
+                        <div class="program-details">
+                            <div class="program-detail price">
+                                <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L414.7 321.3c25-25 25-65.5 0-90.5l-176-176C226.7 42.7 210.5 36 193.5 36H48C21.5 36 0 57.5 0 84zM112 152a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                                <span>Private: Rp25.000/sesi | Small Group: Rp150.000/2x seminggu (1 bulan)</span>
+                            </div>
+                            <div class="program-detail">
+                                <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zm0 96a24 24 0 0 0 -24 24V248c0 6.4 2.5 12.5 7 17l80 80c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-73-73V120a24 24 0 0 0 -24-24z"/></svg>
+                                <span>8 pertemuan dalam 1 bulan</span>
+                            </div>
+                        </div>
+                        <a href="#kontak" class="program-btn">DAFTAR SEKARANG</a>
+                    </div>
+                </div>
+
+                <!-- B1 Program -->
+                <div class="program-card">
+                    <div class="program-content">
+                        <span class="level-tag">LEVEL B1 – INTERMEDIATE</span>
+                        <h3>UNTUK MENENGAH</h3>
+                        <p>Bagi yang sudah cukup lancar berbicara dan ingin menguasai struktur tata bahasa kompleks</p>
+                        <div class="curriculum-section">
+                            <h4>TOPIK UTAMA</h4>
+                            <ul class="curriculum-list">
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Perfect tenses</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Conditionals</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Relative clauses</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Opinions &amp; agreements</li>
+                            </ul>
+                        </div>
+                        <div class="program-details">
+                            <div class="program-detail price">
+                                <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L414.7 321.3c25-25 25-65.5 0-90.5l-176-176C226.7 42.7 210.5 36 193.5 36H48C21.5 36 0 57.5 0 84zM112 152a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                                <span>Private: Rp25.000/sesi</span>
+                            </div>
+                            <div class="program-detail">
+                                <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zm0 96a24 24 0 0 0 -24 24V248c0 6.4 2.5 12.5 7 17l80 80c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-73-73V120a24 24 0 0 0 -24-24z"/></svg>
+                                <span>8 pertemuan dalam 1 bulan</span>
+                            </div>
+                        </div>
+                        <a href="#kontak" class="program-btn">DAFTAR SEKARANG</a>
+                    </div>
+                </div>
+
+                <!-- B2 Program -->
+                <div class="program-card">
+                    <div class="program-content">
+                        <span class="level-tag">LEVEL B2 – UPPER-INTERMEDIATE</span>
+                        <h3>UNTUK MENENGAH LANJUT</h3>
+                        <p>Bagi yang ingin mencapai kemahiran akademik atau profesional dalam bahasa Inggris</p>
+                        <div class="curriculum-section">
+                            <h4>TOPIK UTAMA</h4>
+                            <ul class="curriculum-list">
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Advanced grammar</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Academic vocabulary</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Formal writing</li>
+                                <li><svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg> Debate &amp; discussion</li>
+                            </ul>
+                        </div>
+                        <div class="program-details">
+                            <div class="program-detail price">
+                                <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L414.7 321.3c25-25 25-65.5 0-90.5l-176-176C226.7 42.7 210.5 36 193.5 36H48C21.5 36 0 57.5 0 84zM112 152a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                                <span>Private: Rp25.000/sesi</span>
+                            </div>
+                            <div class="program-detail">
+                                <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zm0 96a24 24 0 0 0 -24 24V248c0 6.4 2.5 12.5 7 17l80 80c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-73-73V120a24 24 0 0 0 -24-24z"/></svg>
+                                <span>8 pertemuan dalam 1 bulan</span>
+                            </div>
+                        </div>
+                        <a href="#kontak" class="program-btn">DAFTAR SEKARANG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section id="kurikulum" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>CURRICULUM</h2>
+                <p data-scroll-reveal="words">Kurikulum berbasis level CEFR dengan materi disesuaikan kemampuan peserta didik</p>
+            </div>
+
+            <!-- Level Switcher Tabs -->
+            <div class="curriculum-tabs" role="tablist" aria-label="Pilih Level Kurikulum">
+                <button class="curriculum-tab active" data-index="0" role="tab" aria-selected="true" aria-controls="curr-slide-0">
+                    <span class="tab-badge">A1</span> Beginner
+                </button>
+                <button class="curriculum-tab" data-index="1" role="tab" aria-selected="false" aria-controls="curr-slide-1">
+                    <span class="tab-badge">A2</span> Elementary
+                </button>
+                <button class="curriculum-tab" data-index="2" role="tab" aria-selected="false" aria-controls="curr-slide-2">
+                    <span class="tab-badge">B1</span> Intermediate
+                </button>
+                <button class="curriculum-tab" data-index="3" role="tab" aria-selected="false" aria-controls="curr-slide-3">
+                    <span class="tab-badge">B2</span> Upper-Intermediate
+                </button>
+            </div>
+
+            <!-- Single Slide Carousel Container with Left/Right Buttons -->
+            <div class="curriculum-carousel">
+                <button class="curriculum-arrow prev" id="currPrevBtn" aria-label="Level Kurikulum Sebelumnya">&#10094;</button>
+
+                <div class="curriculum-viewport">
+                    <div class="curriculum-track" id="curriculumTrack">
+                        <!-- A1 Level Slide -->
+                        <div class="curriculum-slide" id="curr-slide-0">
+                            <div class="curriculum-level">
+                                <div class="level-header">
+                                    <h3>🔵 LEVEL A1 – BEGINNER</h3>
+                                    <p class="level-subtitle">(Untuk Pemula Mutlak)</p>
+                                </div>
+
+                                <div class="curriculum-content">
+                                    <div class="curriculum-section">
+                                        <h4>📌 Target Peserta</h4>
+                                        <p>Bagi yang belum pernah belajar bahasa Inggris atau hanya mengenal sedikit kosakata.</p>
+                                    </div>
+
+                                    <div class="grammar-vocab-container">
+                                        <div class="curriculum-section half-width">
+                                            <h4>📚 Grammar</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Subject pronouns</li>
+                                                <li>To be (am/is/are)</li>
+                                                <li>Simple present tense</li>
+                                                <li>Present continuous</li>
+                                                <li>Articles (a/an/the)</li>
+                                                <li>Basic prepositions (in, on, at, under)</li>
+                                                <li>Plural nouns</li>
+                                                <li>This/that/these/those</li>
+                                                <li>Can / can't</li>
+                                                <li>Yes/No &amp; Wh- questions</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="curriculum-section half-width">
+                                            <h4>🗣️ Vocabulary Themes</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Greetings &amp; introductions</li>
+                                                <li>Family members</li>
+                                                <li>School objects &amp; classroom language</li>
+                                                <li>Numbers, days, months, time</li>
+                                                <li>Colors, shapes, clothes</li>
+                                                <li>Food &amp; drinks</li>
+                                                <li>Hobbies &amp; daily routines</li>
+                                                <li>Places in town</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="curriculum-section">
+                                        <h4>💡 4 Core Skills</h4>
+                                        <div class="skills-container">
+                                            <div class="skill-category">
+                                                <h5>Listening</h5>
+                                                <ul><li>Short dialogues</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Speaking</h5>
+                                                <ul><li>Self-introduction</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Reading</h5>
+                                                <ul><li>ID cards</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Writing</h5>
+                                                <ul><li>Fill-in forms</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- A2 Level Slide -->
+                        <div class="curriculum-slide" id="curr-slide-1">
+                            <div class="curriculum-level">
+                                <div class="level-header">
+                                    <h3>🟢 LEVEL A2 – ELEMENTARY</h3>
+                                    <p class="level-subtitle">(Untuk Pemula Lanjutan)</p>
+                                </div>
+
+                                <div class="curriculum-content">
+                                    <div class="curriculum-section">
+                                        <h4>📌 Target Peserta</h4>
+                                        <p>Bagi yang sudah bisa berkomunikasi dasar namun ingin mengembangkan kemampuan lebih jauh.</p>
+                                    </div>
+
+                                    <div class="grammar-vocab-container">
+                                        <div class="curriculum-section half-width">
+                                            <h4>📚 Grammar</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Simple past (regular &amp; common irregular verbs)</li>
+                                                <li>Past continuous</li>
+                                                <li>Future: "going to" &amp; "will"</li>
+                                                <li>Adverbs of frequency</li>
+                                                <li>Comparatives &amp; superlatives (short adjectives)</li>
+                                                <li>There is / There are</li>
+                                                <li>Possessive adjectives &amp; pronouns</li>
+                                                <li>Modal verbs: should, must, have to</li>
+                                                <li>Countable/uncountable nouns + some/any/much/many</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="curriculum-section half-width">
+                                            <h4>🗣️ Vocabulary Themes</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Daily routines &amp; weekend activities</li>
+                                                <li>Travel &amp; transportation</li>
+                                                <li>Weather &amp; seasons</li>
+                                                <li>Jobs &amp; professions</li>
+                                                <li>Health &amp; body parts</li>
+                                                <li>Shopping &amp; prices</li>
+                                                <li>Basic technology</li>
+                                                <li>Describing people &amp; personalities</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="curriculum-section">
+                                        <h4>💡 4 Core Skills</h4>
+                                        <div class="skills-container">
+                                            <div class="skill-category">
+                                                <h5>Listening</h5>
+                                                <ul><li>Short stories</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Speaking</h5>
+                                                <ul><li>Talk about past weekend</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Reading</h5>
+                                                <ul><li>Recount texts</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Writing</h5>
+                                                <ul><li>Diary entry</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- B1 Level Slide -->
+                        <div class="curriculum-slide" id="curr-slide-2">
+                            <div class="curriculum-level">
+                                <div class="level-header">
+                                    <h3>🟡 LEVEL B1 – INTERMEDIATE</h3>
+                                    <p class="level-subtitle">(Untuk Menengah)</p>
+                                </div>
+
+                                <div class="curriculum-content">
+                                    <div class="curriculum-section">
+                                        <h4>📌 Target Peserta</h4>
+                                        <p>Bagi yang sudah cukup lancar berbicara dan ingin menguasai struktur tata bahasa kompleks.</p>
+                                    </div>
+
+                                    <div class="grammar-vocab-container">
+                                        <div class="curriculum-section half-width">
+                                            <h4>📚 Grammar</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Present perfect vs. past simple</li>
+                                                <li>Past perfect (intro)</li>
+                                                <li>Future continuous &amp; future perfect (basic)</li>
+                                                <li>Passive voice (present &amp; past)</li>
+                                                <li>Reported speech (basic)</li>
+                                                <li>Zero, First, Second conditionals</li>
+                                                <li>Relative clauses (who/which/that)</li>
+                                                <li>Common phrasal verbs</li>
+                                                <li>Gerund vs. infinitive</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="curriculum-section half-width">
+                                            <h4>🗣️ Vocabulary Themes</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Education &amp; future plans</li>
+                                                <li>Environment &amp; pollution</li>
+                                                <li>Social media &amp; digital life</li>
+                                                <li>Culture &amp; traditions</li>
+                                                <li>Emotions &amp; opinions</li>
+                                                <li>Crime &amp; safety</li>
+                                                <li>Global issues (basic)</li>
+                                                <li>Work &amp; career aspirations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="curriculum-section">
+                                        <h4>💡 4 Core Skills</h4>
+                                        <div class="skills-container">
+                                            <div class="skill-category">
+                                                <h5>Listening</h5>
+                                                <ul><li>Podcasts</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Speaking</h5>
+                                                <ul><li>Express opinions</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Reading</h5>
+                                                <ul><li>News articles</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Writing</h5>
+                                                <ul><li>Opinion paragraph</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- B2 Level Slide -->
+                        <div class="curriculum-slide" id="curr-slide-3">
+                            <div class="curriculum-level">
+                                <div class="level-header">
+                                    <h3>🔴 LEVEL B2 – UPPER-INTERMEDIATE</h3>
+                                    <p class="level-subtitle">(Untuk Menengah Lanjut)</p>
+                                </div>
+
+                                <div class="curriculum-content">
+                                    <div class="curriculum-section">
+                                        <h4>📌 Target Peserta</h4>
+                                        <p>Bagi yang ingin mencapai kemahiran akademik atau profesional dalam bahasa Inggris.</p>
+                                    </div>
+
+                                    <div class="grammar-vocab-container">
+                                        <div class="curriculum-section half-width">
+                                            <h4>📚 Grammar</h4>
+                                            <ul class="curriculum-list">
+                                                <li>All perfect tenses</li>
+                                                <li>Passive voice in all tenses</li>
+                                                <li>Third &amp; Mixed conditionals</li>
+                                                <li>Inversion (e.g., Not only did he…)</li>
+                                                <li>Cleft sentences</li>
+                                                <li>Advanced modals (might have, should have)</li>
+                                                <li>Subjunctive (basic)</li>
+                                                <li>Discourse markers (however, furthermore, etc.)</li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="curriculum-section half-width">
+                                            <h4>🗣️ Vocabulary Themes</h4>
+                                            <ul class="curriculum-list">
+                                                <li>Academic &amp; formal vocabulary</li>
+                                                <li>Politics &amp; society</li>
+                                                <li>Science &amp; tech trends</li>
+                                                <li>Literature &amp; film</li>
+                                                <li>Ethics &amp; philosophy (basic)</li>
+                                                <li>Business &amp; economics (intro)</li>
+                                                <li>Idioms &amp; collocations</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="curriculum-section">
+                                        <h4>💡 4 Core Skills</h4>
+                                        <div class="skills-container">
+                                            <div class="skill-category">
+                                                <h5>Listening</h5>
+                                                <ul><li>TED Talks</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Speaking</h5>
+                                                <ul><li>Debating</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Reading</h5>
+                                                <ul><li>Editorials</li></ul>
+                                            </div>
+                                            <div class="skill-category">
+                                                <h5>Writing</h5>
+                                                <ul><li>Argumentative essay</li></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="curriculum-arrow next" id="currNextBtn" aria-label="Level Kurikulum Berikutnya">&#10095;</button>
+            </div>
+
+            <!-- Pagination Dots Indicator -->
+            <div class="curriculum-dots" role="tablist" aria-label="Indikator Level Kurikulum">
+                <button class="curr-dot active" data-index="0" aria-label="Level A1"></button>
+                <button class="curr-dot" data-index="1" aria-label="Level A2"></button>
+                <button class="curr-dot" data-index="2" aria-label="Level B1"></button>
+                <button class="curr-dot" data-index="3" aria-label="Level B2"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang-kami" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>TENTANG KAMI</h2>
+                <p data-scroll-reveal="words">Pengajar ahli dengan latar belakang akademik terbaik</p>
+            </div>
+            <div class="about-box">
+                <div class="about-content">
+                    <p data-scroll-reveal="words">Bimbel BIsaInggris.Id dipandu oleh pengajar yang merupakan <strong>Lulusan Terbaik Jurusan Pendidikan Bahasa Inggris dari IKIP-PGRI Pontianak dengan predikat <em>cum laude</em>.</strong></p>
+                    <p data-scroll-reveal="words">Selain itu, pengajar juga telah lulus program <strong>PPG Calon Guru G2 2024 dari Universitas Tanjungpura</strong>, sehingga memiliki sertifikasi resmi sebagai guru bahasa Inggris profesional yang diakui oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi RI.</p>
+                    <p data-scroll-reveal="words">Dengan kombinasi kompetensi akademik, sertifikasi resmi, dan pengalaman mengajar siswa SMP–SMA di Sambas, kami siap membimbing Anda mencapai target belajar bahasa Inggris secara efektif, menyenangkan, dan berbasis kurikulum internasional CEFR.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimoni" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>TESTIMONI SISWA &amp; ORANG TUA</h2>
+                <p data-scroll-reveal="words">Pengalaman nyata dari peserta les kami</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-slider">
+                    <button class="testimonial-nav-btn testimonial-nav-prev" aria-label="Testimonial sebelumnya">&#10094;</button>
+                    <div class="testimonial-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Lesnya jelas dan sabar banget. Sekarang saya lebih percaya diri pas presentasi bahasa Inggris di kelas."</p>
+                            <div>
+                                <div class="testimonial-author">Ananda R.</div>
+                                <div class="testimonial-role">Siswa SMP Negeri 2 Sambas</div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Anak saya jadi lebih rajin belajar bahasa Inggris sejak ikut les di sini. Nilainya naik dari 70 ke 88 dalam dua bulan!"</p>
+                            <div>
+                                <div class="testimonial-author">Bu Lina</div>
+                                <div class="testimonial-role">Orang Tua Siswa</div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Metodenya seru dan gak bikin tegang. Materinya disesuaikan sama kemampuan saya. Recount text yang dulu susah, sekarang jadi mudah!"</p>
+                            <div>
+                                <div class="testimonial-author">Dinda M.</div>
+                                <div class="testimonial-role">Siswa SMA Negeri 1 Sambas</div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Nilai anak saya meningkat pesat setelah 2 bulan. Guru sangat telaten dan materi terstruktur."</p>
+                            <div>
+                                <div class="testimonial-author">Fajar H.</div>
+                                <div class="testimonial-role">Orang Tua Siswa</div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Materinya praktis dan aplikatif — langsung bisa dipakai waktu tugas kuliah dan presentasi."</p>
+                            <div>
+                                <div class="testimonial-author">Lila S.</div>
+                                <div class="testimonial-role">Mahasiswa</div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Guru sangat komunikatif dan memberikan feedback yang membangun. Progres saya terasa setiap minggu."</p>
+                            <div>
+                                <div class="testimonial-author">Riko P.</div>
+                                <div class="testimonial-role">Karyawan / Peserta Dewasa</div>
+                            </div>
+                        </div>
+                        <!-- Seamless Infinite Loop Duplicate Set -->
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Lesnya jelas dan sabar banget. Sekarang saya lebih percaya diri pas presentasi bahasa Inggris di kelas."</p>
+                            <div>
+                                <div class="testimonial-author">Ananda R.</div>
+                                <div class="testimonial-role">Siswa SMP Negeri 2 Sambas</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Anak saya jadi lebih rajin belajar bahasa Inggris sejak ikut les di sini. Nilainya naik dari 70 ke 88 dalam dua bulan!"</p>
+                            <div>
+                                <div class="testimonial-author">Bu Lina</div>
+                                <div class="testimonial-role">Orang Tua Siswa</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Metodenya seru dan gak bikin tegang. Materinya disesuaikan sama kemampuan saya. Recount text yang dulu susah, sekarang jadi mudah!"</p>
+                            <div>
+                                <div class="testimonial-author">Dinda M.</div>
+                                <div class="testimonial-role">Siswa SMA Negeri 1 Sambas</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Nilai anak saya meningkat pesat setelah 2 bulan. Guru sangat telaten dan materi terstruktur."</p>
+                            <div>
+                                <div class="testimonial-author">Fajar H.</div>
+                                <div class="testimonial-role">Orang Tua Siswa</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Materinya praktis dan aplikatif — langsung bisa dipakai waktu tugas kuliah dan presentasi."</p>
+                            <div>
+                                <div class="testimonial-author">Lila S.</div>
+                                <div class="testimonial-role">Mahasiswa</div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card" aria-hidden="true">
+                            <p class="testimonial-text">"Guru sangat komunikatif dan memberikan feedback yang membangun. Progres saya terasa setiap minggu."</p>
+                            <div>
+                                <div class="testimonial-author">Riko P.</div>
+                                <div class="testimonial-role">Karyawan / Peserta Dewasa</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="testimonial-nav-btn testimonial-nav-next" aria-label="Testimonial berikutnya">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="kontak" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>MULAI PERJALANAN BELAJAR BAHASA INGGRISMU SEKARANG!</h2>
+                <p data-scroll-reveal="words">Isi form di bawah dan kami akan menghubungimu via WhatsApp</p>
+            </div>
+            <div class="contact-box">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">NAMA LENGKAP *</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Masukkan nama lengkap Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">NOMOR WHATSAPP *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="Contoh: 081234567890">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="programSelect">LEVEL YANG DIINGINKAN *</label>
+                        <select id="programSelect" name="program" class="form-control" required>
+                            <option value="">PILIH TINGKAT KEMAMPUAN</option>
+                            <option value="A1 – Beginner (Pemula Mutlak)">A1 – BEGINNER (PEMULA MUTLAK) - Private/Rp25.000/sesi</option>
+                            <option value="A1 – Small Group (Pemula Mutlak)">A1 – BEGINNER (PEMULA MUTLAK) - Small Group/Rp150.000/2x seminggu (1 bulan)</option>
+                            <option value="A2 – Elementary (Pemula Lanjutan)">A2 – ELEMENTARY (PEMULA LANJUTAN) - Private/Rp25.000/sesi</option>
+                            <option value="A2 – Small Group (Pemula Lanjutan)">A2 – ELEMENTARY (PEMULA LANJUTAN) - Small Group/Rp150.000/2x seminggu (1 bulan)</option>
+                            <option value="B1 – Intermediate (Menengah)">B1 – INTERMEDIATE (MENENGAH)</option>
+                            <option value="B2 – Upper-Intermediate (Menengah Lanjut)">B2 – UPPER-INTERMEDIATE (MENENGAH LANJUT)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V392c0-2.6 .6-5.1 1.7-7.5l82.7-177.3c4.1-8.8 14.5-12.6 23.3-8.5s12.6 14.5 8.5 23.3L197.8 392H388l45.4-295.3L64.4 288.7 160 338.4V416l-89.9-46.7c-9.3-4.8-15.6-14-17-24.5s2.4-21 10.2-28.1L464.3 9.4c9.3-8.4 23-9.5 33.8-3.8z"/></svg>
+                        <span>KIRIM KE WHATSAPP</span>
+                    </button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>ATAU HUBUNGI LANGSUNG:</h3>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                        <span>WhatsApp: <a href="https://wa.me/6289516291556" target="_blank" rel="noopener noreferrer">+62 895-1629-1556</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        <span>Email: <a href="mailto:bisa.inggris@gmail.com">bisa.inggris@gmail.com</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 384 512" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        <span>Lokasi: Sambas, West Kalimantan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section with Google Maps -->
+    <section id="lokasi" class="location-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>TEMUKAN KAMI DI PETA</h2>
+                <p data-scroll-reveal="words">Lokasi bimbel kami dapat diakses melalui Google Maps</p>
+            </div>
+            <div class="map-container">
+                <iframe
+                    title="Peta Lokasi Bimbel BisaInggris.Id di Sambas, Kalimantan Barat"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d963.4188094002989!2d109.29206936955259!3d1.3507235999147877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31e4bb0040f95d71%3A0xd2ffa3d28fc7768!2sBisaInggris.Id!5e1!3m2!1sen!2sid!4v1770364445456!5m2!1sen!2sid"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="address-container">
+                <h3>Alamat Kami</h3>
+                <p data-scroll-reveal="words">Jl. Komplek Mutiara Indah Jalur 1, Saing Rambi, Sambas (Depan Kompi)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>BISAINGGRIS.ID</h3>
+                    <p>Layanan les privat bahasa Inggris terbaik untuk siswa SMP/SMA di Sambas, West Kalimantan. Kurikulum berbasis CEFR dari level A1 hingga B2 dengan fokus pada hasil nyata.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>KONTAK</h4>
+                    <p>WhatsApp: +62 895-1629-1556</p>
+                    <p>Email: bisa.inggris@gmail.com</p>
+                    <p>Lokasi: Sambas, West Kalimantan</p>
+                </div>
+                <div class="footer-programs">
+                    <h4>PROGRAM</h4>
+                    <p>LEVEL A1 – BEGINNER (Private &amp; Small Group)</p>
+                    <p>LEVEL A2 – ELEMENTARY (Private &amp; Small Group)</p>
+                    <p>LEVEL B1 – INTERMEDIATE</p>
+                    <p>LEVEL B2 – UPPER-INTERMEDIATE</p>
+                </div>
+                <div class="footer-curriculum">
+                    <h4>KURIKULUM</h4>
+                    <p><a href="#kurikulum">Lihat Detail Kurikulum</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BISAINGGRIS.ID. HAK CIPTA DILINDUNGI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optimized Script (Single Deferred Bundle) -->
+    <script src="javascript/script.js" defer></script>
+</body>
+</html>
