@@ -214,168 +214,106 @@
         }
 
         // ---------------------------------------------------------------------
-        // 5. Interactive Single-Level Curriculum Slider (Seamless Infinite Wrap)
+        // 5. Framer-Inspired Interactive Swatch Accordion
         // ---------------------------------------------------------------------
-        const curriculumTrack = document.getElementById('curriculumTrack');
-        const currPrevBtn = document.getElementById('currPrevBtn');
-        const currNextBtn = document.getElementById('currNextBtn');
-        const currTabs = Array.from(document.querySelectorAll('.curriculum-tab'));
-        const currDots = Array.from(document.querySelectorAll('.curr-dot'));
+        const swatchAccordion = document.getElementById('curriculumSwatchAccordion');
+        const swatchTabs = Array.from(document.querySelectorAll('.swatch-tab'));
 
-        if (curriculumTrack) {
-            const originalSlides = Array.from(curriculumTrack.children);
-            const totalSlides = originalSlides.length; // 4 levels: A1, A2, B1, B2
+        if (swatchAccordion) {
+            const panels = Array.from(swatchAccordion.querySelectorAll('.swatch-panel'));
 
-            // Build infinite wrap clones: [B2_clone] [A1] [A2] [B1] [B2] [A1_clone]
-            const firstClone = originalSlides[0].cloneNode(true);
-            const lastClone = originalSlides[totalSlides - 1].cloneNode(true);
-            firstClone.setAttribute('aria-hidden', 'true');
-            lastClone.setAttribute('aria-hidden', 'true');
-            firstClone.removeAttribute('id');
-            lastClone.removeAttribute('id');
+            const setActiveLevel = (targetIndex, shouldScroll = false) => {
+                if (targetIndex < 0 || targetIndex >= panels.length) return;
 
-            curriculumTrack.appendChild(firstClone);
-            curriculumTrack.insertBefore(lastClone, originalSlides[0]);
+                panels.forEach((panel, i) => {
+                    const isActive = i === targetIndex;
+                    panel.classList.toggle('is-active', isActive);
+                    panel.setAttribute('aria-expanded', String(isActive));
+                });
 
-            let currentIndex = 1; // Start at first original slide (A1)
-            let isTransitioning = false;
-            const transitionStyle = 'transform 0.45s cubic-bezier(0.25, 1, 0.5, 1)';
-
-            // Position initially at A1 without animation
-            curriculumTrack.style.transition = 'none';
-            curriculumTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-            void curriculumTrack.offsetWidth;
-            curriculumTrack.style.transition = transitionStyle;
-
-            const updateIndicators = (logicalIdx) => {
-                currTabs.forEach((tab, i) => {
-                    const isActive = i === logicalIdx;
+                swatchTabs.forEach((tab, i) => {
+                    const isActive = i === targetIndex;
                     tab.classList.toggle('active', isActive);
                     tab.setAttribute('aria-selected', String(isActive));
                 });
 
-                currDots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === logicalIdx);
+                if (shouldScroll && window.innerWidth <= 860) {
+                    const activePanel = panels[targetIndex];
+                    if (activePanel) {
+                        activePanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }
+            };
+
+            // Panel strip / header clicks
+            panels.forEach((panel, i) => {
+                const strip = panel.querySelector('.swatch-strip');
+
+                const handlePanelActivation = (e) => {
+                    // Do not interfere if user clicks an anchor / button inside content
+                    if (e.target.closest('a') || e.target.closest('button')) {
+                        if (!e.target.closest('.swatch-strip') && !e.target.closest('.swatch-toggle-btn')) {
+                            return;
+                        }
+                    }
+
+                    const isCurrentlyActive = panel.classList.contains('is-active');
+
+                    // On mobile, tapping header of already active panel toggles it
+                    if (window.innerWidth <= 860 && isCurrentlyActive && e.target.closest('.swatch-strip')) {
+                        panel.classList.remove('is-active');
+                        panel.setAttribute('aria-expanded', 'false');
+                        swatchTabs.forEach((tab) => {
+                            tab.classList.remove('active');
+                            tab.setAttribute('aria-selected', 'false');
+                        });
+                        return;
+                    }
+
+                    if (!isCurrentlyActive) {
+                        setActiveLevel(i, window.innerWidth <= 860);
+                    }
+                };
+
+                if (strip) {
+                    strip.addEventListener('click', handlePanelActivation);
+
+                    // Accessible keyboard navigation
+                    strip.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            handlePanelActivation(e);
+                        } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                            e.preventDefault();
+                            const nextIdx = (i + 1) % panels.length;
+                            setActiveLevel(nextIdx, window.innerWidth <= 860);
+                            panels[nextIdx]?.querySelector('.swatch-strip')?.focus();
+                        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                            e.preventDefault();
+                            const prevIdx = (i - 1 + panels.length) % panels.length;
+                            setActiveLevel(prevIdx, window.innerWidth <= 860);
+                            panels[prevIdx]?.querySelector('.swatch-strip')?.focus();
+                        }
+                    });
+                }
+
+                // If user clicks anywhere on a collapsed panel on desktop, expand it
+                panel.addEventListener('click', (e) => {
+                    if (!panel.classList.contains('is-active')) {
+                        setActiveLevel(i, false);
+                    }
                 });
-            };
-
-            const moveToSlide = (targetIndex, animate = true) => {
-                if (isTransitioning) return;
-                isTransitioning = true;
-                currentIndex = targetIndex;
-
-                if (prefersReducedMotion || !animate) {
-                    curriculumTrack.style.transition = 'none';
-                } else {
-                    curriculumTrack.style.transition = transitionStyle;
-                }
-
-                curriculumTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-                // Calculate logical index for indicators (0: A1, 1: A2, 2: B1, 3: B2)
-                let logicalIdx = (currentIndex - 1) % totalSlides;
-                if (logicalIdx < 0) logicalIdx += totalSlides;
-                updateIndicators(logicalIdx);
-
-                if (prefersReducedMotion || !animate) {
-                    isTransitioning = false;
-                }
-            };
-
-            // Seamless teleport when transitioning past boundaries
-            curriculumTrack.addEventListener('transitionend', (e) => {
-                if (e.target !== curriculumTrack || e.propertyName !== 'transform') return;
-                isTransitioning = false;
-
-                // Slid forward past B2 into A1_clone (index 5) -> instantly snap to original A1 (index 1)
-                if (currentIndex === totalSlides + 1) {
-                    curriculumTrack.style.transition = 'none';
-                    currentIndex = 1;
-                    curriculumTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    void curriculumTrack.offsetWidth;
-                    curriculumTrack.style.transition = transitionStyle;
-                }
-                // Slid backward past A1 into B2_clone (index 0) -> instantly snap to original B2 (index 4)
-                else if (currentIndex === 0) {
-                    curriculumTrack.style.transition = 'none';
-                    currentIndex = totalSlides;
-                    curriculumTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-                    void curriculumTrack.offsetWidth;
-                    curriculumTrack.style.transition = transitionStyle;
-                }
             });
 
-            // Right arrow button (slide to next level naturally)
-            if (currNextBtn) {
-                currNextBtn.addEventListener('click', () => {
-                    moveToSlide(currentIndex + 1);
-                });
-            }
-
-            // Left arrow button (slide to previous level naturally)
-            if (currPrevBtn) {
-                currPrevBtn.addEventListener('click', () => {
-                    moveToSlide(currentIndex - 1);
-                });
-            }
-
-            // Tab button clicks (A1, A2, B1, B2)
-            currTabs.forEach((tab) => {
+            // Quick Filter Tabs (A1, A2, B1, B2)
+            swatchTabs.forEach((tab) => {
                 tab.addEventListener('click', () => {
-                    if (isTransitioning) return;
-                    const targetLogical = parseInt(tab.getAttribute('data-index'), 10);
-                    if (isNaN(targetLogical)) return;
-
-                    // If at B2 and user clicks A1, slide forward to A1_clone for natural rightward slide
-                    if (currentIndex === totalSlides && targetLogical === 0) {
-                        moveToSlide(totalSlides + 1);
-                    }
-                    // If at A1 and user clicks B2, slide backward to B2_clone for natural leftward slide
-                    else if (currentIndex === 1 && targetLogical === totalSlides - 1) {
-                        moveToSlide(0);
-                    } else {
-                        moveToSlide(targetLogical + 1);
+                    const targetIdx = parseInt(tab.getAttribute('data-target'), 10);
+                    if (!isNaN(targetIdx)) {
+                        setActiveLevel(targetIdx, true);
                     }
                 });
             });
-
-            // Indicator dot clicks
-            currDots.forEach((dot) => {
-                dot.addEventListener('click', () => {
-                    if (isTransitioning) return;
-                    const targetLogical = parseInt(dot.getAttribute('data-index'), 10);
-                    if (isNaN(targetLogical)) return;
-
-                    if (currentIndex === totalSlides && targetLogical === 0) {
-                        moveToSlide(totalSlides + 1);
-                    } else if (currentIndex === 1 && targetLogical === totalSlides - 1) {
-                        moveToSlide(0);
-                    } else {
-                        moveToSlide(targetLogical + 1);
-                    }
-                });
-            });
-
-            // Touch Swipe Support for Mobile
-            let touchStartX = 0;
-            let touchStartY = 0;
-            curriculumTrack.addEventListener('touchstart', (e) => {
-                touchStartX = e.touches[0].clientX;
-                touchStartY = e.touches[0].clientY;
-            }, { passive: true });
-
-            curriculumTrack.addEventListener('touchend', (e) => {
-                if (isTransitioning) return;
-                const diffX = e.changedTouches[0].clientX - touchStartX;
-                const diffY = e.changedTouches[0].clientY - touchStartY;
-                if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
-                    if (diffX < 0) {
-                        moveToSlide(currentIndex + 1);
-                    } else {
-                        moveToSlide(currentIndex - 1);
-                    }
-                }
-            }, { passive: true });
         }
 
         // ---------------------------------------------------------------------
@@ -503,14 +441,12 @@
                 e.preventDefault();
                 const nameInput = contactForm.querySelector('#name');
                 const phoneInput = contactForm.querySelector('#phone');
-                const programInput = contactForm.querySelector('#programSelect');
 
                 const name = nameInput ? nameInput.value.trim() : '';
                 const phone = phoneInput ? phoneInput.value.trim() : '';
-                const program = programInput ? programInput.value.trim() : '';
 
-                const message = `Halo, saya ${name}\nProgram yang dipilih: ${program}\nNomor WA: ${phone}`;
-                const waUrl = `https://wa.me/6289516291556?text=${encodeURIComponent(message)}`;
+                const message = `Halo, saya ${name}\nNomor WA: ${phone}\nSaya ingin mendaftar bimbingan belajar bahasa Inggris.`;
+                const waUrl = `https://wa.me/6282153939543?text=${encodeURIComponent(message)}`;
                 window.open(waUrl, '_blank', 'noopener,noreferrer');
             });
         }
