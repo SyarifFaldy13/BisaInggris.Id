@@ -63,326 +63,514 @@
         </div>
     </section>
 
-    <!-- Curriculum Section -->
-    <section id="kurikulum" class="section">
+    <!-- Curriculum Section (Framer Swatch Accordion) -->
+    <section id="kurikulum" class="section curriculum-section-wrap">
         <div class="container">
             <div class="section-title">
                 <h2>CURRICULUM</h2>
                 <p data-scroll-reveal="words">Kurikulum berbasis level CEFR dengan materi disesuaikan kemampuan peserta didik</p>
             </div>
 
-            <!-- Level Switcher Tabs -->
-            <div class="curriculum-tabs" role="tablist" aria-label="Pilih Level Kurikulum">
-                <button class="curriculum-tab active" data-index="0" role="tab" aria-selected="true" aria-controls="curr-slide-0">
-                    <span class="tab-badge">A1</span> Beginner
+            <!-- Level Switcher Quick Filter Tabs -->
+            <div class="swatch-tabs" role="tablist" aria-label="Pilih Level Kurikulum">
+                <button class="swatch-tab active" data-target="0" role="tab" aria-selected="true" aria-controls="swatch-panel-0">
+                    <span class="tab-badge badge-a1">A1</span> Beginner
                 </button>
-                <button class="curriculum-tab" data-index="1" role="tab" aria-selected="false" aria-controls="curr-slide-1">
-                    <span class="tab-badge">A2</span> Elementary
+                <button class="swatch-tab" data-target="1" role="tab" aria-selected="false" aria-controls="swatch-panel-1">
+                    <span class="tab-badge badge-a2">A2</span> Elementary
                 </button>
-                <button class="curriculum-tab" data-index="2" role="tab" aria-selected="false" aria-controls="curr-slide-2">
-                    <span class="tab-badge">B1</span> Intermediate
+                <button class="swatch-tab" data-target="2" role="tab" aria-selected="false" aria-controls="swatch-panel-2">
+                    <span class="tab-badge badge-b1">B1</span> Intermediate
                 </button>
-                <button class="curriculum-tab" data-index="3" role="tab" aria-selected="false" aria-controls="curr-slide-3">
-                    <span class="tab-badge">B2</span> Upper-Intermediate
+                <button class="swatch-tab" data-target="3" role="tab" aria-selected="false" aria-controls="swatch-panel-3">
+                    <span class="tab-badge badge-b2">B2</span> Upper-Intermediate
                 </button>
             </div>
 
-            <!-- Single Slide Carousel Container with Left/Right Buttons -->
-            <div class="curriculum-carousel">
-                <button class="curriculum-arrow prev" id="currPrevBtn" aria-label="Level Kurikulum Sebelumnya">&#10094;</button>
+            <!-- Interactive Swatch Accordion Deck -->
+            <div class="swatch-accordion" id="curriculumSwatchAccordion" role="region" aria-label="Kurikulum Interaktif Swatch Accordion">
+                <!-- Swatch Panel 1: A1 Beginner -->
+                <div class="swatch-panel is-active" id="swatch-panel-0" data-level="a1" data-index="0" style="--level-accent: #2563eb;" role="tabpanel" aria-expanded="true">
+                    <!-- Collapsed Swatch Strip (Sidebar strip on desktop / Header bar on mobile) -->
+                    <div class="swatch-strip" tabindex="0" role="button" aria-label="Buka Level A1 Beginner">
+                        <div class="swatch-accent-bar"></div>
+                        <div class="swatch-strip-header">
+                            <span class="swatch-strip-badge badge-a1">A1</span>
+                            <span class="swatch-strip-dot"></span>
+                            <span class="swatch-strip-num">01</span>
+                        </div>
+                        <div class="swatch-strip-title-wrap">
+                            <span class="swatch-strip-title">LEVEL A1 — BEGINNER</span>
+                            <span class="swatch-strip-sub">Pemula Mutlak</span>
+                        </div>
+                        <div class="swatch-strip-footer">
+                            <span class="swatch-toggle-btn" aria-hidden="true">
+                                <svg class="icon icon-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                            </span>
+                        </div>
+                    </div>
 
-                <div class="curriculum-viewport">
-                    <div class="curriculum-track" id="curriculumTrack">
-                        <!-- A1 Level Slide -->
-                        <div class="curriculum-slide" id="curr-slide-0">
-                            <div class="curriculum-level">
-                                <div class="level-header">
-                                    <h3>🔵 LEVEL A1 – BEGINNER</h3>
-                                    <p class="level-subtitle">(Untuk Pemula Mutlak)</p>
+                    <!-- Expanded Swatch Content -->
+                    <div class="swatch-content">
+                        <div class="swatch-content-inner">
+                            <div class="swatch-level-header">
+                                <div class="swatch-header-left">
+                                    <div class="swatch-level-meta">
+                                        <span class="swatch-level-chip chip-a1">🔵 CEFR A1</span>
+                                        <span class="swatch-tag">Fondasi Bahasa</span>
+                                    </div>
+                                    <h3 class="swatch-level-title">LEVEL A1 – BEGINNER</h3>
+                                    <p class="swatch-level-subtitle">(Untuk Pemula Mutlak)</p>
+                                </div>
+                                <div class="swatch-header-right">
+                                    <span class="swatch-watermark">01</span>
+                                </div>
+                            </div>
+
+                            <div class="swatch-target-box">
+                                <div class="swatch-target-icon">📌</div>
+                                <div class="swatch-target-text">
+                                    <strong>Target Peserta:</strong> Bagi yang belum pernah belajar bahasa Inggris atau hanya mengenal sedikit kosakata.
+                                </div>
+                            </div>
+
+                            <div class="swatch-curriculum-grid">
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">📚</span>
+                                        <h4>Grammar Focus</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Subject pronouns</li>
+                                        <li>To be (am/is/are)</li>
+                                        <li>Simple present tense</li>
+                                        <li>Present continuous</li>
+                                        <li>Articles (a/an/the)</li>
+                                        <li>Basic prepositions (in, on, at, under)</li>
+                                        <li>Plural nouns</li>
+                                        <li>This/that/these/those</li>
+                                        <li>Can / can't</li>
+                                        <li>Yes/No &amp; Wh- questions</li>
+                                    </ul>
                                 </div>
 
-                                <div class="curriculum-content">
-                                    <div class="curriculum-section">
-                                        <h4>📌 Target Peserta</h4>
-                                        <p>Bagi yang belum pernah belajar bahasa Inggris atau hanya mengenal sedikit kosakata.</p>
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">🗣️</span>
+                                        <h4>Vocabulary Themes</h4>
                                     </div>
+                                    <ul class="swatch-list">
+                                        <li>Greetings &amp; introductions</li>
+                                        <li>Family members</li>
+                                        <li>School objects &amp; classroom language</li>
+                                        <li>Numbers, days, months, time</li>
+                                        <li>Colors, shapes, clothes</li>
+                                        <li>Food &amp; drinks</li>
+                                        <li>Hobbies &amp; daily routines</li>
+                                        <li>Places in town</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                                    <div class="grammar-vocab-container">
-                                        <div class="curriculum-section half-width">
-                                            <h4>📚 Grammar</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Subject pronouns</li>
-                                                <li>To be (am/is/are)</li>
-                                                <li>Simple present tense</li>
-                                                <li>Present continuous</li>
-                                                <li>Articles (a/an/the)</li>
-                                                <li>Basic prepositions (in, on, at, under)</li>
-                                                <li>Plural nouns</li>
-                                                <li>This/that/these/those</li>
-                                                <li>Can / can't</li>
-                                                <li>Yes/No &amp; Wh- questions</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="curriculum-section half-width">
-                                            <h4>🗣️ Vocabulary Themes</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Greetings &amp; introductions</li>
-                                                <li>Family members</li>
-                                                <li>School objects &amp; classroom language</li>
-                                                <li>Numbers, days, months, time</li>
-                                                <li>Colors, shapes, clothes</li>
-                                                <li>Food &amp; drinks</li>
-                                                <li>Hobbies &amp; daily routines</li>
-                                                <li>Places in town</li>
-                                            </ul>
-                                        </div>
+                            <div class="swatch-skills-block">
+                                <div class="swatch-skills-header">
+                                    <span class="swatch-card-icon">💡</span>
+                                    <h4>4 Core Skills Competency</h4>
+                                </div>
+                                <div class="swatch-skills-grid">
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Listening</div>
+                                        <div class="skill-desc">Short dialogues</div>
                                     </div>
-
-                                    <div class="curriculum-section">
-                                        <h4>💡 4 Core Skills</h4>
-                                        <div class="skills-container">
-                                            <div class="skill-category">
-                                                <h5>Listening</h5>
-                                                <ul><li>Short dialogues</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Speaking</h5>
-                                                <ul><li>Self-introduction</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Reading</h5>
-                                                <ul><li>ID cards</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Writing</h5>
-                                                <ul><li>Fill-in forms</li></ul>
-                                            </div>
-                                        </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Speaking</div>
+                                        <div class="skill-desc">Self-introduction</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Reading</div>
+                                        <div class="skill-desc">ID cards</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Writing</div>
+                                        <div class="skill-desc">Fill-in forms</div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- A2 Level Slide -->
-                        <div class="curriculum-slide" id="curr-slide-1">
-                            <div class="curriculum-level">
-                                <div class="level-header">
-                                    <h3>🟢 LEVEL A2 – ELEMENTARY</h3>
-                                    <p class="level-subtitle">(Untuk Pemula Lanjutan)</p>
-                                </div>
-
-                                <div class="curriculum-content">
-                                    <div class="curriculum-section">
-                                        <h4>📌 Target Peserta</h4>
-                                        <p>Bagi yang sudah bisa berkomunikasi dasar namun ingin mengembangkan kemampuan lebih jauh.</p>
-                                    </div>
-
-                                    <div class="grammar-vocab-container">
-                                        <div class="curriculum-section half-width">
-                                            <h4>📚 Grammar</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Simple past (regular &amp; common irregular verbs)</li>
-                                                <li>Past continuous</li>
-                                                <li>Future: "going to" &amp; "will"</li>
-                                                <li>Adverbs of frequency</li>
-                                                <li>Comparatives &amp; superlatives (short adjectives)</li>
-                                                <li>There is / There are</li>
-                                                <li>Possessive adjectives &amp; pronouns</li>
-                                                <li>Modal verbs: should, must, have to</li>
-                                                <li>Countable/uncountable nouns + some/any/much/many</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="curriculum-section half-width">
-                                            <h4>🗣️ Vocabulary Themes</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Daily routines &amp; weekend activities</li>
-                                                <li>Travel &amp; transportation</li>
-                                                <li>Weather &amp; seasons</li>
-                                                <li>Jobs &amp; professions</li>
-                                                <li>Health &amp; body parts</li>
-                                                <li>Shopping &amp; prices</li>
-                                                <li>Basic technology</li>
-                                                <li>Describing people &amp; personalities</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="curriculum-section">
-                                        <h4>💡 4 Core Skills</h4>
-                                        <div class="skills-container">
-                                            <div class="skill-category">
-                                                <h5>Listening</h5>
-                                                <ul><li>Short stories</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Speaking</h5>
-                                                <ul><li>Talk about past weekend</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Reading</h5>
-                                                <ul><li>Recount texts</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Writing</h5>
-                                                <ul><li>Diary entry</li></ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- B1 Level Slide -->
-                        <div class="curriculum-slide" id="curr-slide-2">
-                            <div class="curriculum-level">
-                                <div class="level-header">
-                                    <h3>🟡 LEVEL B1 – INTERMEDIATE</h3>
-                                    <p class="level-subtitle">(Untuk Menengah)</p>
-                                </div>
-
-                                <div class="curriculum-content">
-                                    <div class="curriculum-section">
-                                        <h4>📌 Target Peserta</h4>
-                                        <p>Bagi yang sudah cukup lancar berbicara dan ingin menguasai struktur tata bahasa kompleks.</p>
-                                    </div>
-
-                                    <div class="grammar-vocab-container">
-                                        <div class="curriculum-section half-width">
-                                            <h4>📚 Grammar</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Present perfect vs. past simple</li>
-                                                <li>Past perfect (intro)</li>
-                                                <li>Future continuous &amp; future perfect (basic)</li>
-                                                <li>Passive voice (present &amp; past)</li>
-                                                <li>Reported speech (basic)</li>
-                                                <li>Zero, First, Second conditionals</li>
-                                                <li>Relative clauses (who/which/that)</li>
-                                                <li>Common phrasal verbs</li>
-                                                <li>Gerund vs. infinitive</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="curriculum-section half-width">
-                                            <h4>🗣️ Vocabulary Themes</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Education &amp; future plans</li>
-                                                <li>Environment &amp; pollution</li>
-                                                <li>Social media &amp; digital life</li>
-                                                <li>Culture &amp; traditions</li>
-                                                <li>Emotions &amp; opinions</li>
-                                                <li>Crime &amp; safety</li>
-                                                <li>Global issues (basic)</li>
-                                                <li>Work &amp; career aspirations</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="curriculum-section">
-                                        <h4>💡 4 Core Skills</h4>
-                                        <div class="skills-container">
-                                            <div class="skill-category">
-                                                <h5>Listening</h5>
-                                                <ul><li>Podcasts</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Speaking</h5>
-                                                <ul><li>Express opinions</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Reading</h5>
-                                                <ul><li>News articles</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Writing</h5>
-                                                <ul><li>Opinion paragraph</li></ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- B2 Level Slide -->
-                        <div class="curriculum-slide" id="curr-slide-3">
-                            <div class="curriculum-level">
-                                <div class="level-header">
-                                    <h3>🔴 LEVEL B2 – UPPER-INTERMEDIATE</h3>
-                                    <p class="level-subtitle">(Untuk Menengah Lanjut)</p>
-                                </div>
-
-                                <div class="curriculum-content">
-                                    <div class="curriculum-section">
-                                        <h4>📌 Target Peserta</h4>
-                                        <p>Bagi yang ingin mencapai kemahiran akademik atau profesional dalam bahasa Inggris.</p>
-                                    </div>
-
-                                    <div class="grammar-vocab-container">
-                                        <div class="curriculum-section half-width">
-                                            <h4>📚 Grammar</h4>
-                                            <ul class="curriculum-list">
-                                                <li>All perfect tenses</li>
-                                                <li>Passive voice in all tenses</li>
-                                                <li>Third &amp; Mixed conditionals</li>
-                                                <li>Inversion (e.g., Not only did he…)</li>
-                                                <li>Cleft sentences</li>
-                                                <li>Advanced modals (might have, should have)</li>
-                                                <li>Subjunctive (basic)</li>
-                                                <li>Discourse markers (however, furthermore, etc.)</li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="curriculum-section half-width">
-                                            <h4>🗣️ Vocabulary Themes</h4>
-                                            <ul class="curriculum-list">
-                                                <li>Academic &amp; formal vocabulary</li>
-                                                <li>Politics &amp; society</li>
-                                                <li>Science &amp; tech trends</li>
-                                                <li>Literature &amp; film</li>
-                                                <li>Ethics &amp; philosophy (basic)</li>
-                                                <li>Business &amp; economics (intro)</li>
-                                                <li>Idioms &amp; collocations</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="curriculum-section">
-                                        <h4>💡 4 Core Skills</h4>
-                                        <div class="skills-container">
-                                            <div class="skill-category">
-                                                <h5>Listening</h5>
-                                                <ul><li>TED Talks</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Speaking</h5>
-                                                <ul><li>Debating</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Reading</h5>
-                                                <ul><li>Editorials</li></ul>
-                                            </div>
-                                            <div class="skill-category">
-                                                <h5>Writing</h5>
-                                                <ul><li>Argumentative essay</li></ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="swatch-action-bar">
+                                <a href="#kontak" class="swatch-cta-btn">
+                                    <span>DAFTAR LEVEL A1 SEKARANG</span>
+                                    <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.5 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                </a>
+                                <a href="https://wa.me/6282153939543?text=Halo%20BIsaInggris.Id,%20saya%20ingin%20konsultasi%20mengenai%20Kurikulum%20Level%20A1%20(Beginner)" target="_blank" rel="noopener noreferrer" class="swatch-wa-btn">
+                                    <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                    <span>Konsultasi Level A1</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button class="curriculum-arrow next" id="currNextBtn" aria-label="Level Kurikulum Berikutnya">&#10095;</button>
-            </div>
+                <!-- Swatch Panel 2: A2 Elementary -->
+                <div class="swatch-panel" id="swatch-panel-1" data-level="a2" data-index="1" style="--level-accent: #059669;" role="tabpanel" aria-expanded="false">
+                    <!-- Collapsed Swatch Strip -->
+                    <div class="swatch-strip" tabindex="0" role="button" aria-label="Buka Level A2 Elementary">
+                        <div class="swatch-accent-bar"></div>
+                        <div class="swatch-strip-header">
+                            <span class="swatch-strip-badge badge-a2">A2</span>
+                            <span class="swatch-strip-dot"></span>
+                            <span class="swatch-strip-num">02</span>
+                        </div>
+                        <div class="swatch-strip-title-wrap">
+                            <span class="swatch-strip-title">LEVEL A2 — ELEMENTARY</span>
+                            <span class="swatch-strip-sub">Pemula Lanjutan</span>
+                        </div>
+                        <div class="swatch-strip-footer">
+                            <span class="swatch-toggle-btn" aria-hidden="true">
+                                <svg class="icon icon-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                            </span>
+                        </div>
+                    </div>
 
-            <!-- Pagination Dots Indicator -->
-            <div class="curriculum-dots" role="tablist" aria-label="Indikator Level Kurikulum">
-                <button class="curr-dot active" data-index="0" aria-label="Level A1"></button>
-                <button class="curr-dot" data-index="1" aria-label="Level A2"></button>
-                <button class="curr-dot" data-index="2" aria-label="Level B1"></button>
-                <button class="curr-dot" data-index="3" aria-label="Level B2"></button>
+                    <!-- Expanded Swatch Content -->
+                    <div class="swatch-content">
+                        <div class="swatch-content-inner">
+                            <div class="swatch-level-header">
+                                <div class="swatch-header-left">
+                                    <div class="swatch-level-meta">
+                                        <span class="swatch-level-chip chip-a2">🟢 CEFR A2</span>
+                                        <span class="swatch-tag">Komunikasi Dasar</span>
+                                    </div>
+                                    <h3 class="swatch-level-title">LEVEL A2 – ELEMENTARY</h3>
+                                    <p class="swatch-level-subtitle">(Untuk Pemula Lanjutan)</p>
+                                </div>
+                                <div class="swatch-header-right">
+                                    <span class="swatch-watermark">02</span>
+                                </div>
+                            </div>
+
+                            <div class="swatch-target-box">
+                                <div class="swatch-target-icon">📌</div>
+                                <div class="swatch-target-text">
+                                    <strong>Target Peserta:</strong> Bagi yang sudah bisa berkomunikasi dasar namun ingin mengembangkan kemampuan lebih jauh.
+                                </div>
+                            </div>
+
+                            <div class="swatch-curriculum-grid">
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">📚</span>
+                                        <h4>Grammar Focus</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Simple past (regular &amp; common irregular verbs)</li>
+                                        <li>Past continuous</li>
+                                        <li>Future: "going to" &amp; "will"</li>
+                                        <li>Adverbs of frequency</li>
+                                        <li>Comparatives &amp; superlatives (short adjectives)</li>
+                                        <li>There is / There are</li>
+                                        <li>Possessive adjectives &amp; pronouns</li>
+                                        <li>Modal verbs: should, must, have to</li>
+                                        <li>Countable/uncountable nouns + some/any/much/many</li>
+                                    </ul>
+                                </div>
+
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">🗣️</span>
+                                        <h4>Vocabulary Themes</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Daily routines &amp; weekend activities</li>
+                                        <li>Travel &amp; transportation</li>
+                                        <li>Weather &amp; seasons</li>
+                                        <li>Jobs &amp; professions</li>
+                                        <li>Health &amp; body parts</li>
+                                        <li>Shopping &amp; prices</li>
+                                        <li>Basic technology</li>
+                                        <li>Describing people &amp; personalities</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="swatch-skills-block">
+                                <div class="swatch-skills-header">
+                                    <span class="swatch-card-icon">💡</span>
+                                    <h4>4 Core Skills Competency</h4>
+                                </div>
+                                <div class="swatch-skills-grid">
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Listening</div>
+                                        <div class="skill-desc">Short stories</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Speaking</div>
+                                        <div class="skill-desc">Talk about past weekend</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Reading</div>
+                                        <div class="skill-desc">Recount texts</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Writing</div>
+                                        <div class="skill-desc">Diary entry</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swatch-action-bar">
+                                <a href="#kontak" class="swatch-cta-btn">
+                                    <span>DAFTAR LEVEL A2 SEKARANG</span>
+                                    <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.5 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                </a>
+                                <a href="https://wa.me/6282153939543?text=Halo%20BIsaInggris.Id,%20saya%20ingin%20konsultasi%20mengenai%20Kurikulum%20Level%20A2%20(Elementary)" target="_blank" rel="noopener noreferrer" class="swatch-wa-btn">
+                                    <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                    <span>Konsultasi Level A2</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swatch Panel 3: B1 Intermediate -->
+                <div class="swatch-panel" id="swatch-panel-2" data-level="b1" data-index="2" style="--level-accent: #d97706;" role="tabpanel" aria-expanded="false">
+                    <!-- Collapsed Swatch Strip -->
+                    <div class="swatch-strip" tabindex="0" role="button" aria-label="Buka Level B1 Intermediate">
+                        <div class="swatch-accent-bar"></div>
+                        <div class="swatch-strip-header">
+                            <span class="swatch-strip-badge badge-b1">B1</span>
+                            <span class="swatch-strip-dot"></span>
+                            <span class="swatch-strip-num">03</span>
+                        </div>
+                        <div class="swatch-strip-title-wrap">
+                            <span class="swatch-strip-title">LEVEL B1 — INTERMEDIATE</span>
+                            <span class="swatch-strip-sub">Tingkat Menengah</span>
+                        </div>
+                        <div class="swatch-strip-footer">
+                            <span class="swatch-toggle-btn" aria-hidden="true">
+                                <svg class="icon icon-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Expanded Swatch Content -->
+                    <div class="swatch-content">
+                        <div class="swatch-content-inner">
+                            <div class="swatch-level-header">
+                                <div class="swatch-header-left">
+                                    <div class="swatch-level-meta">
+                                        <span class="swatch-level-chip chip-b1">🟡 CEFR B1</span>
+                                        <span class="swatch-tag">Kemandirian Berbahasa</span>
+                                    </div>
+                                    <h3 class="swatch-level-title">LEVEL B1 – INTERMEDIATE</h3>
+                                    <p class="swatch-level-subtitle">(Untuk Menengah)</p>
+                                </div>
+                                <div class="swatch-header-right">
+                                    <span class="swatch-watermark">03</span>
+                                </div>
+                            </div>
+
+                            <div class="swatch-target-box">
+                                <div class="swatch-target-icon">📌</div>
+                                <div class="swatch-target-text">
+                                    <strong>Target Peserta:</strong> Bagi yang sudah cukup lancar berbicara dan ingin menguasai struktur tata bahasa kompleks.
+                                </div>
+                            </div>
+
+                            <div class="swatch-curriculum-grid">
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">📚</span>
+                                        <h4>Grammar Focus</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Present perfect vs. past simple</li>
+                                        <li>Past perfect (intro)</li>
+                                        <li>Future continuous &amp; future perfect (basic)</li>
+                                        <li>Passive voice (present &amp; past)</li>
+                                        <li>Reported speech (basic)</li>
+                                        <li>Zero, First, Second conditionals</li>
+                                        <li>Relative clauses (who/which/that)</li>
+                                        <li>Common phrasal verbs</li>
+                                        <li>Gerund vs. infinitive</li>
+                                    </ul>
+                                </div>
+
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">🗣️</span>
+                                        <h4>Vocabulary Themes</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Education &amp; future plans</li>
+                                        <li>Environment &amp; pollution</li>
+                                        <li>Social media &amp; digital life</li>
+                                        <li>Culture &amp; traditions</li>
+                                        <li>Emotions &amp; opinions</li>
+                                        <li>Crime &amp; safety</li>
+                                        <li>Global issues (basic)</li>
+                                        <li>Work &amp; career aspirations</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="swatch-skills-block">
+                                <div class="swatch-skills-header">
+                                    <span class="swatch-card-icon">💡</span>
+                                    <h4>4 Core Skills Competency</h4>
+                                </div>
+                                <div class="swatch-skills-grid">
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Listening</div>
+                                        <div class="skill-desc">Podcasts</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Speaking</div>
+                                        <div class="skill-desc">Express opinions</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Reading</div>
+                                        <div class="skill-desc">News articles</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Writing</div>
+                                        <div class="skill-desc">Opinion paragraph</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swatch-action-bar">
+                                <a href="#kontak" class="swatch-cta-btn">
+                                    <span>DAFTAR LEVEL B1 SEKARANG</span>
+                                    <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.5 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                </a>
+                                <a href="https://wa.me/6282153939543?text=Halo%20BIsaInggris.Id,%20saya%20ingin%20konsultasi%20mengenai%20Kurikulum%20Level%20B1%20(Intermediate)" target="_blank" rel="noopener noreferrer" class="swatch-wa-btn">
+                                    <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                    <span>Konsultasi Level B1</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swatch Panel 4: B2 Upper-Intermediate -->
+                <div class="swatch-panel" id="swatch-panel-3" data-level="b2" data-index="3" style="--level-accent: #dc2626;" role="tabpanel" aria-expanded="false">
+                    <!-- Collapsed Swatch Strip -->
+                    <div class="swatch-strip" tabindex="0" role="button" aria-label="Buka Level B2 Upper-Intermediate">
+                        <div class="swatch-accent-bar"></div>
+                        <div class="swatch-strip-header">
+                            <span class="swatch-strip-badge badge-b2">B2</span>
+                            <span class="swatch-strip-dot"></span>
+                            <span class="swatch-strip-num">04</span>
+                        </div>
+                        <div class="swatch-strip-title-wrap">
+                            <span class="swatch-strip-title">LEVEL B2 — UPPER-INTERMEDIATE</span>
+                            <span class="swatch-strip-sub">Menengah Lanjut</span>
+                        </div>
+                        <div class="swatch-strip-footer">
+                            <span class="swatch-toggle-btn" aria-hidden="true">
+                                <svg class="icon icon-plus" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Expanded Swatch Content -->
+                    <div class="swatch-content">
+                        <div class="swatch-content-inner">
+                            <div class="swatch-level-header">
+                                <div class="swatch-header-left">
+                                    <div class="swatch-level-meta">
+                                        <span class="swatch-level-chip chip-b2">🔴 CEFR B2</span>
+                                        <span class="swatch-tag">Kemahiran Profesional</span>
+                                    </div>
+                                    <h3 class="swatch-level-title">LEVEL B2 – UPPER-INTERMEDIATE</h3>
+                                    <p class="swatch-level-subtitle">(Untuk Menengah Lanjut)</p>
+                                </div>
+                                <div class="swatch-header-right">
+                                    <span class="swatch-watermark">04</span>
+                                </div>
+                            </div>
+
+                            <div class="swatch-target-box">
+                                <div class="swatch-target-icon">📌</div>
+                                <div class="swatch-target-text">
+                                    <strong>Target Peserta:</strong> Bagi yang ingin mencapai kemahiran akademik atau profesional dalam bahasa Inggris.
+                                </div>
+                            </div>
+
+                            <div class="swatch-curriculum-grid">
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">📚</span>
+                                        <h4>Grammar Focus</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>All perfect tenses</li>
+                                        <li>Passive voice in all tenses</li>
+                                        <li>Third &amp; Mixed conditionals</li>
+                                        <li>Inversion (e.g., Not only did he…)</li>
+                                        <li>Cleft sentences</li>
+                                        <li>Advanced modals (might have, should have)</li>
+                                        <li>Subjunctive (basic)</li>
+                                        <li>Discourse markers (however, furthermore, etc.)</li>
+                                    </ul>
+                                </div>
+
+                                <div class="swatch-curriculum-card">
+                                    <div class="swatch-card-header">
+                                        <span class="swatch-card-icon">🗣️</span>
+                                        <h4>Vocabulary Themes</h4>
+                                    </div>
+                                    <ul class="swatch-list">
+                                        <li>Academic &amp; formal vocabulary</li>
+                                        <li>Politics &amp; society</li>
+                                        <li>Science &amp; tech trends</li>
+                                        <li>Literature &amp; film</li>
+                                        <li>Ethics &amp; philosophy (basic)</li>
+                                        <li>Business &amp; economics (intro)</li>
+                                        <li>Idioms &amp; collocations</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="swatch-skills-block">
+                                <div class="swatch-skills-header">
+                                    <span class="swatch-card-icon">💡</span>
+                                    <h4>4 Core Skills Competency</h4>
+                                </div>
+                                <div class="swatch-skills-grid">
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Listening</div>
+                                        <div class="skill-desc">TED Talks</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Speaking</div>
+                                        <div class="skill-desc">Debating</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Reading</div>
+                                        <div class="skill-desc">Editorials</div>
+                                    </div>
+                                    <div class="swatch-skill-tile">
+                                        <div class="skill-name">Writing</div>
+                                        <div class="skill-desc">Argumentative essay</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swatch-action-bar">
+                                <a href="#kontak" class="swatch-cta-btn">
+                                    <span>DAFTAR LEVEL B2 SEKARANG</span>
+                                    <svg class="icon" viewBox="0 0 448 512" aria-hidden="true"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0-105.5 105.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                </a>
+                                <a href="https://wa.me/6282153939543?text=Halo%20BIsaInggris.Id,%20saya%20ingin%20konsultasi%20mengenai%20Kurikulum%20Level%20B2%20(Upper-Intermediate)" target="_blank" rel="noopener noreferrer" class="swatch-wa-btn">
+                                    <svg class="icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
+                                    <span>Konsultasi Level B2</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
